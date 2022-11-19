@@ -10,7 +10,7 @@ Run `npm i` whyle in the folder of the project
 
 ## Data Server
 
-Run `npm run server` to run a fake db.json that feeds all the data
+Run `npm run server` to run a fake db.json that feeds all the data, will be found at `http://localhost:4100/`
 
 
 ## Development server
