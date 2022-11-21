@@ -13,6 +13,6 @@ export class ItemComponent implements OnInit {
   constructor(private pService: ProductService, private router: Router) {}
 
   ngOnInit(): void {}
-  
+
   
 }

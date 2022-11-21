@@ -1,7 +1,6 @@
-import Product from '../models/product';
-import { faker } from '@faker-js/faker';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { faker } from '@faker-js/faker';
+import Product from '../models/product';
 
 const DBURL = 'http://localhost:4100/Products/';
 

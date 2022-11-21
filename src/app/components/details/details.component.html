@@ -1,1 +1,36 @@
-<p>details works!</p>
+<div class="container mt-5 mb-5">
+  <div class="card">
+    <div class="row g-0">
+      <div class="col-md-6 border-end">
+        <div class="d-flex flex-column justify-content-center">
+          <div class="main_image">
+            <img
+              src="{{ product.image }}"
+              id="main_product_image"
+              width="350"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 right-side">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3>{{product.name}}</h3>
+            <span class="heart"><i class="bx bx-heart"></i></span>
+          </div>
+          <div class="mt-2 pr-3 content">
+            <p>{{ product.description }}</p>
+          </div>
+          <h3>{{ product.price | currency: "USD" }}</h3>
+          <div class="mt-5">
+            <span class="fw-bold">Color</span><span></span>
+          </div>
+          <div class="buttons d-flex flex-row mt-5 gap-3">
+            <button class="btn btn-success">Buy Now</button>
+            <button class="btn btn-primary">Back To List</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,11 @@ import ProductService from 'src/app/servises/prodService';
 export class AddnewComponent implements OnInit {
   product: Product = new Product();
 
-  constructor(private pService: ProductService, private router: Router, private faker: FakerService) {}
+  constructor(
+    private pService: ProductService,
+    private router: Router,
+    private faker: FakerService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -22,6 +26,8 @@ export class AddnewComponent implements OnInit {
     });
   }
   fakeData() {
-    this.product = this.faker.getFakeProduct() 
+    this.product = this.faker.getFakeProduct();
   }
+
+  
 }
