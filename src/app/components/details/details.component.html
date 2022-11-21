@@ -15,7 +15,7 @@
       <div class="col-md-6">
         <div class="p-3 right-side">
           <div class="d-flex justify-content-between align-items-center">
-            <h3>{{product.name}}</h3>
+            <h3>{{ product.name }}</h3>
             <span class="heart"><i class="bx bx-heart"></i></span>
           </div>
           <div class="mt-2 pr-3 content">
@@ -23,11 +23,24 @@
           </div>
           <h3>{{ product.price | currency: "USD" }}</h3>
           <div class="mt-5">
-            <span class="fw-bold">Color</span><span></span>
+            <span class="fw-bold">City: </span>{{ product.city }} <span></span>
+            <br />
+            <span class="fw-bold">Seller: </span>{{ product.seller }}
+            <span></span>
+            <br />
+            <span class="fw-bold">Seller Phone: </span
+            >{{ product.sellersPhone }} <span></span>
+            <br />
+            <span class="fw-bold">Publish date: </span
+            >{{ product.date | date: "medium" }} <span></span>
+            <br />
+            <span class="fw-bold">Stock: </span>{{ product.numberInStock }}
+            <span></span>
           </div>
+
           <div class="buttons d-flex flex-row mt-5 gap-3">
-            <button class="btn btn-success">Buy Now</button>
-            <button class="btn btn-primary">Back To List</button>
+            <a class="btn btn-success" href="/order/{{product.id}}">Buy Now</a>
+            <a class="btn btn-primary" href="/">Back To List</a>
           </div>
         </div>
       </div>

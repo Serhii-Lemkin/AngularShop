@@ -33,7 +33,6 @@ export default class FakerService {
     'https://m.media-amazon.com/images/I/61z-hrimvXL.jpg',
     'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-butter-brands-1666984356.jpg?crop=0.669xw:1.00xh;0.197xw,0&resize=640:*',
     'https://d3m9l0v76dty0.cloudfront.net/system/photos/10324790/original/648be191af2019f038abb816d4ce433e.jpg',
-    'https://m.media-amazon.com/images/I/81nUFx9sXoL._AC_SL1500_.jpg',
     'https://www.kantoaudio.com/wp-content/uploads/yu4bam_main.png',
     'https://post.healthline.com/wp-content/uploads/2020/09/AN440-Potatoes-732x549-thumb-732x549.jpg',
     'https://media.wired.com/photos/621980b1aaf30ea1c35e400a/125:94/w_1822,h_1370,c_limit/Gear-Samsung-S22-Series.jpg',
