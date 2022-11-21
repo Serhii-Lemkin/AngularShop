@@ -11,6 +11,8 @@ import { OrderComponent } from './components/order/order.component';
 import { OrdersuccessComponent } from './components/ordersuccess/ordersuccess.component';
 import { ItemComponent } from './components/item/item.component';
 import { ItemlistComponent } from './components/itemlist/itemlist.component';
+import ProductService from './servises/prodService';
+import FakerService from './servises/fakerService';
 
 
 @NgModule({
@@ -22,15 +24,10 @@ import { ItemlistComponent } from './components/itemlist/itemlist.component';
     OrderComponent,
     OrdersuccessComponent,
     ItemComponent,
-    ItemlistComponent
+    ItemlistComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    routing
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, HttpClientModule, FormsModule, routing],
+  providers: [ProductService, FakerService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

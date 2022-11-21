@@ -1,1 +1,15 @@
-<p>itemlist works!</p>
+<h1>Here you can see al of our offers!</h1>
+<h4>
+  We have a lot of different products to see and like! choose carefully, no
+  refunds!
+</h4>
+<hr />
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let p of products" class="container">
+      <div class="col-lg-6 mb-4">
+        <app-item [product]="p" class=""></app-item>
+      </div>
+    </ng-container>
+  </div>
+</div>

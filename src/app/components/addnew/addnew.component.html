@@ -1,1 +1,106 @@
-<p>addnew works!</p>
+<img src="{{ product.image }}" alt="" />
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Name</span>
+  </div>
+  <input
+    type="text"
+    [(ngModel)]="product.name"
+    class="form-control"
+    placeholder=""
+  />
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Description</span>
+  </div>
+  <textarea
+    class="form-control"
+    [(ngModel)]="product.description"
+    aria-label="With textarea"
+  ></textarea>
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Image</span>
+  </div>
+  <input
+    type="text"
+    [(ngModel)]="product.image"
+    class="form-control"
+    placeholder=""
+  />
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Price</span>
+  </div>
+  <input
+    type="number"
+    [(ngModel)]="product.price"
+    class="form-control"
+    placeholder=""
+  />
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">City</span>
+  </div>
+  <input
+    type="text"
+    [(ngModel)]="product.city"
+    class="form-control"
+    placeholder=""
+  />
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Contact Phone</span>
+  </div>
+  <input
+    type="text"
+    [(ngModel)]="product.sellersPhone"
+    class="form-control"
+    placeholder=""
+  />
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Stock</span>
+  </div>
+  <input
+    type="number"
+    [(ngModel)]="product.numberInStock"
+    class="form-control"
+    placeholder=""
+  />
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Seller</span>
+  </div>
+  <input
+    type="text"
+    [(ngModel)]="product.seller"
+    class="form-control"
+    placeholder=""
+  />
+</div>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-primary" (click)="fakeData()">
+    Fake Data
+  </button>
+  <a class="btn btn-primary" href="/"> BackToList </a>
+  <button type="button" class="btn btn-success" (click)="addNewItem()">
+    Add New
+  </button>
+</div>
