@@ -1,106 +1,140 @@
 <img src="{{ product.image }}" alt="" />
+<form name="newItemForm" id="form">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Name</span>
+      <div></div>
+    </div>
+    <input
+      name="NameF"
+      type="text"
+      minlength="4"
+      [(ngModel)]="product.name"
+      required
+      class="form-control"
+      placeholder=""
+    />
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Name</span>
+    <div class="hint">
+      <span>Must be longer that 4 letters</span>
+    </div>
   </div>
-  <input
-    type="text"
-    [(ngModel)]="product.name"
-    class="form-control"
-    placeholder=""
-  />
-</div>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text">Description</span>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Description</span>
+    </div>
+    <textarea
+      name="descF"
+      class="form-control"
+      [(ngModel)]="product.description"
+      aria-label="With textarea"
+    ></textarea>
   </div>
-  <textarea
-    class="form-control"
-    [(ngModel)]="product.description"
-    aria-label="With textarea"
-  ></textarea>
-</div>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Image</span>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Image</span>
+    </div>
+    <input
+      name="imgF"
+      type="text"
+      [(ngModel)]="product.image"
+      class="form-control"
+      placeholder=""
+    />
   </div>
-  <input
-    type="text"
-    [(ngModel)]="product.image"
-    class="form-control"
-    placeholder=""
-  />
-</div>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Price</span>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Price</span>
+    </div>
+    <input
+      min="1"
+      name="priceF"
+      required
+      type="number"
+      [(ngModel)]="product.price"
+      class="form-control"
+      placeholder=""
+    />
+    <div class="hint">
+      <span>Price cant be 0</span>
+    </div>
   </div>
-  <input
-    type="number"
-    [(ngModel)]="product.price"
-    class="form-control"
-    placeholder=""
-  />
-</div>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">City</span>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">City</span>
+    </div>
+    <input
+      name="cityF"
+      type="text"
+      [(ngModel)]="product.city"
+      class="form-control"
+      placeholder=""
+    />
   </div>
-  <input
-    type="text"
-    [(ngModel)]="product.city"
-    class="form-control"
-    placeholder=""
-  />
-</div>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Contact Phone</span>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Contact Phone</span>
+    </div>
+    <input
+      name="contactPhF"
+      required
+      pattern="\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})?"
+      type="text"
+      [(ngModel)]="product.sellersPhone"
+      class="form-control"
+      placeholder=""
+    />
+    <div class="hint">
+      <span>Format is not correct</span>
+    </div>
   </div>
-  <input
-    type="text"
-    [(ngModel)]="product.sellersPhone"
-    class="form-control"
-    placeholder=""
-  />
-</div>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Stock</span>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Stock</span>
+    </div>
+    <input
+      name="stockF"
+      min="1"
+      type="number"
+      [(ngModel)]="product.numberInStock"
+      class="form-control"
+      placeholder=""
+    />
+    <div class="hint">
+      <span>Can't be less than 1</span>
+    </div>
   </div>
-  <input
-    type="number"
-    [(ngModel)]="product.numberInStock"
-    class="form-control"
-    placeholder=""
-  />
-</div>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Seller</span>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Seller</span>
+    </div>
+    <input
+      name="sellerF"
+      required
+      type="text"
+      [(ngModel)]="product.seller"
+      class="form-control"
+      placeholder=""
+    />
+    <div class="hint">
+      <span>Company name is required</span>
+    </div>
   </div>
-  <input
-    type="text"
-    [(ngModel)]="product.seller"
-    class="form-control"
-    placeholder=""
-  />
-</div>
 
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary" (click)="fakeData()">
-    Fake Data
-  </button>
-  <a class="btn btn-primary" href="/"> BackToList </a>
-  <button type="button" class="btn btn-success" (click)="addNewItem()">
-    Add New
-  </button>
-</div>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary" (click)="fakeData()">
+      Fake Data
+    </button>
+    <a class="btn btn-primary" href="/"> BackToList </a>
+    <button type="button" class="btn btn-success" (click)="addNewItem()">
+      Add New
+    </button>
+  </div>
+</form>

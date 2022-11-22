@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing } from 'src/app/routing.module';
 import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './components/about/about.component';
 import { AddnewComponent } from './components/addnew/addnew.component';
 import { DetailsComponent } from './components/details/details.component';
@@ -26,7 +26,13 @@ import FakerService from './servises/fakerService';
     ItemComponent,
     ItemlistComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, FormsModule, routing],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    routing,
+    ReactiveFormsModule,
+  ],
   providers: [ProductService, FakerService],
   bootstrap: [AppComponent],
 })

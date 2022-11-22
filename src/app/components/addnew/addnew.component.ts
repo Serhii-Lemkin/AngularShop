@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import Product from 'src/app/models/product';
 import FakerService from 'src/app/servises/fakerService';
 import ProductService from 'src/app/servises/prodService';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-addnew',
@@ -21,6 +22,11 @@ export class AddnewComponent implements OnInit {
   ngOnInit(): void {}
 
   addNewItem() {
+    const form = document.getElementById('form');
+    if (form?.classList.contains('ng-invalid')) {
+      alert('Please fill the required fields.')
+      return;
+    }
     this.pService.post(this.product).subscribe((data) => {
       this.router.navigateByUrl('/');
     });
@@ -28,6 +34,4 @@ export class AddnewComponent implements OnInit {
   fakeData() {
     this.product = this.faker.getFakeProduct();
   }
-
-  
 }
