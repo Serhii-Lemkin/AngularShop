@@ -21,7 +21,7 @@
           <div class="mt-2 pr-3 content">
             <p>{{ product.description }}</p>
           </div>
-          <h3>{{ product.price | currency: "USD" }}</h3>
+          <h3>{{ product.price | showCurrency: curr }}</h3>
           <div class="mt-5">
             <span class="fw-bold">City: </span>{{ product.city }} <span></span>
             <br />

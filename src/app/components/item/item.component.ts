@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Product from 'src/app/models/product';
+import { DataService } from 'src/app/servises/dataService';
 import ProductService from 'src/app/servises/prodService';
 
 @Component({
@@ -10,9 +11,15 @@ import ProductService from 'src/app/servises/prodService';
 })
 export class ItemComponent implements OnInit {
   @Input() product = new Product();
-  constructor(private pService: ProductService, private router: Router) {}
+  curr: string = "USD"
 
-  ngOnInit(): void {}
+  constructor(private pService: ProductService,
+    private router: Router,
+    private data: DataService) {
+      this.data.currentCurrency.subscribe(c => this.curr = c);
+    }
 
-  
+  ngOnInit(): void {
+    
+  }
 }
