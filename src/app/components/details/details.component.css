@@ -1,6 +1,4 @@
-img {
-  max-height: 300px;
-}
+
 
 body {
   background-color: #ecedee;
@@ -16,22 +14,13 @@ body {
   align-items: center;
   margin-top: 10px;
 }
-.thumbnail_images ul li {
-  margin: 5px;
-  padding: 10px;
-  border: 2px solid #eee;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.thumbnail_images ul li:hover {
-  border: 2px solid #000;
-}
+
 .main_image {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #eee;
-  height: 400px;
+  height: auto;
   width: 100%;
   overflow: hidden;
 }

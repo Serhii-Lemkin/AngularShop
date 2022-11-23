@@ -12,15 +12,18 @@
       <li class="nav-item">
         <a class="nav-link" href="/about">About</a>
       </li>
-      <li>
-        <div class="mb-3">
-          <select class="form-select" (change)="selectionChanged()" [(ngModel)]="selectedCurr">
-            <option value="USD" selected>$</option>option>
-            <option value="ILS">₪</option>
-          </select>
-        </div>
-      </li>
     </ul>
+  </div>
+  <div class="mb-3">
+    <select
+      class="form-select right"
+      (change)="selectionChanged()"
+      [(ngModel)]="selectedCurr"
+    >
+      <option value="USD" selected>$</option>
+      option>
+      <option value="ILS">₪</option>
+    </select>
   </div>
 </nav>
 

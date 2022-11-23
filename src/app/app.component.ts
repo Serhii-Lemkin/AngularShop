@@ -9,24 +9,25 @@ import { DataService } from './servises/dataService';
 export class AppComponent {
   constructor(private data: DataService) {
     this.getCurrency()
-    this.data.changeCurrency(this.selectedCurr);
-    console.log('get');
+    this.update();
   }
   title = 'final-project-Serhii';
   selectedCurr: string = 'USD';
-  selectionChanged() {
-    this.data.changeCurrency(this.selectedCurr);
+  selectionChanged() {    
     this.setCurrency();
   }
 
   setCurrency() {
     localStorage.setItem('currency', this.selectedCurr);
+    this.update()
     console.log('set');
-
   }
   getCurrency() {
     this.selectedCurr = localStorage.getItem('currency') || "USD";
     console.log("get")
   }
-
+update(){
+  this.data.changeCurrency(this.selectedCurr);
+  console.log("update")
+}
 }
