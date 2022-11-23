@@ -9,14 +9,14 @@ import { DataService } from './servises/dataService';
 export class AppComponent {
   constructor(private data: DataService) {
     this.getCurrency()
+    this.data.changeCurrency(this.selectedCurr);
+    console.log('get');
   }
   title = 'final-project-Serhii';
   selectedCurr: string = 'USD';
   selectionChanged() {
     this.data.changeCurrency(this.selectedCurr);
     this.setCurrency();
-    console.log('constractor');
-
   }
 
   setCurrency() {
