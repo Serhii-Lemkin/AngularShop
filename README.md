@@ -1,5 +1,7 @@
 # Final Angular Project Serhii
 
+This is a shop written with Angular framework, using json-server as a backend.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
  
  `How to start?`
